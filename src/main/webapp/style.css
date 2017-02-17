@@ -1,0 +1,424 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, big, em, font, img, small, strong, sub, sup, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit;  font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}
+:focus { outline: 0;}
+ol, ul { list-style: none;}
+table { border-collapse: separate; border-spacing: 0;}
+caption, th, td { text-align: left; font-weight: normal;}
+strong,b{font-weight:bold}
+em{font-style:italic}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+/*-------------------------------------*/
+@font-face {
+    font-family: 'PtsansBold';
+    src: url('fonts/ptsans_bold.eot');
+    src: url('fonts/ptsans_bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ptsans_bold.woff') format('woff'),
+         url('fonts/ptsans_bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PtsansRegular';
+    src: url('fonts/ptsans_regular.eot');
+    src: url('fonts/ptsans_regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ptsans_regular.woff') format('woff'),
+         url('fonts/ptsans_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*-------------------------------------*/
+*{-moz-box-sizing: border-box; box-sizing: border-box;}
+html {width:100%;}
+body {font-size:14px; color: #7e7e7e; background: #fff; line-height:1.3;  }
+a {color: #6a9b9a; }
+a:hover {text-decoration:none;}
+.clr,#clr,.Clr {clear: both;}
+/*-------------------------------------*/
+section { width:1000px; margin:0 auto;}
+#Header { background: white; z-index: 99999999; height: 70px}
+#fixedheader {z-index: 99999999; position: fixed; background: white; width: 100%; height: 70px; }
+#loginblock{ float:right; width: 100px;}
+#Header #Logo { width:238px; height:55px;   z-index: 99999999; background: white; left: 20px; display: inline-block}
+#Header #Logo a { display:block; background:url(images/logo2.png) center center no-repeat; width:238px; height:55px;}
+#Header #LogoDealer { width:50px; height:55px;  margin:2px 42px 0px 0; z-index: 99999999; background: white; float: right}
+#Header #LogoDealer img { display:block; width:50px; height:55px;}
+#Header #Two { display:none; z-index: 99999999;}
+#Header nav { margin-top: -7px; display: inline-block; background: white; z-index: 99999999; width: 100%; background: -moz-linear-gradient(top, #ffffff 30%, #d20000 90%);
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 30%,#d20000 90%,#d20000 100%);
+    border-bottom: 1px solid #740500; height: 30px
+    }
+#Header nav ul { margin-left:30px;}
+#Header nav ul li { -webkit-box-shadow: inset 0px 0px 1px #ffeded;  box-shadow: inset 0px 0px 1px #ffeded; -moz-box-shadow: inset 0px 0px 1px #ffeded; height: 20px; float:left; margin-top: 9px; padding-right:15px; padding-left:15px;  border-left: 1px solid #740500; }
+#Header nav ul li:nth-child(1) {}
+#Header nav ul li:nth-child(4) {}
+#Header nav ul li:nth-child(5) {border-right: 1px solid #740500;}
+#Header nav ul li a { font-size:15px; color: white; text-transform:uppercase; text-decoration:none;}
+#Header nav ul li a:hover {color: #000000;}
+#Header nav ul li a:focus {color: #000000;}
+#Header nav ul li:hover { background: white}
+#Header nav ul li:focus { background: white}
+#Header #Pfone { margin-right: 250px; float:right; background:url(images/Pfone.jpg) left top no-repeat; padding-left:40px; font-size:18px; color:#000000; font-family: 'PtsansBold'; margin-top:20px; height:32px; padding-top:2px;}
+#BlockTop { position: absolute; z-index:5; right: 20px; width: 100%;}
+#BlockTop #DeskrTop { float:right; width:53%; padding-left:80px;}
+#BlockTop #DeskrTop p { color:#fff; text-transform:uppercase; font-size:44px; font-family: 'PtsansBold'; text-shadow: 0.1em 0.1em 0.2em black; color: aliceblue; width:450px; padding-left:10px; margin-top:10px; line-height:0.7; margin-bottom:10px;}
+#BlockTop #DeskrTop .None { display:none;}
+#BlockTop #DeskrTop img {height: 490px; float: right}
+#BlockTop #DeskrTop ul { margin-left:25px;}
+#BlockTop #DeskrTop ul li { background:url(images/BgLi.png) left 4px no-repeat; font-size:26px; color: #e30100; font-family: 'PtsansBold'; padding-left:25px; line-height:1.3; text-shadow: white 2px 0px, white 2px 2px, white 0px 2px, white -2px 2px, white -2px 0px, white -2px -2px, white 0px -2px, white 2px -2px; text-transform:uppercase; width:320px;}
+#BlockTop #DeskrTop ul li span { color:#1bb407;}
+#BlockTop #FormDeskrTop { background: #e30100; background-color: rgba(227, 51, 59, 0.7); width:300px;  margin-left: 150px; margin-top:80px; float: left}
+#BlockTop #FormDeskrTop p { text-transform:uppercase; font-size:15px; font-family: 'PtsansBold'; color:#fff; padding:17px 10px 15px 10px; text-align:center; line-height:1.2;}
+#BlockTop #FormDeskrTop input { font-size:17px; color:#828282; width:215px; background:#fff; line-height:30px; height:30px; padding:0 10px; margin-bottom:15px; margin-left:38px; font-family: 'PtsansRegular'; border: none;}
+::-moz-placeholder {font-size:17px; color:#000; font-family: 'PtsansRegular';}
+#BlockTop #FormDeskrTop #ButtonFormDeskrTop{width:190px; height:42px; margin:0 auto; line-height:38px; background: linear-gradient(to top, #d1d1d6, rgb(255, 255, 255)); border-radius:4px; border:2px solid #e4eff2; margin-bottom:33px; }
+#BlockTop #FormDeskrTop #ButtonFormDeskrTop a { text-decoration:none; text-transform:uppercase; font-size:12.5px; font-family: 'PtsansBold'; color: #ff0009; width:190px; height:42px; display:block; padding-left:45px; background:url(images/BasketImg.png)20px 8px no-repeat; cursor:pointer;}
+#BlockTop #FormDeskrTop #ButtonFormDeskrTop:hover {background: linear-gradient(to bottom, #d1d1d6, #ffffff);}
+
+#ButtonFoto {line-height:30px;  text-transform:uppercase; font-size:12px; width:160px; height:32px; text-decoration:none; color: red ;  background: linear-gradient(to top, #d1d1d6, #fff4fd); border-radius:10px; border:2px solid #e4eff2; margin:17px auto 30px auto;}
+#ButtonFoto #photo{position: absolute;  height:32px; padding-left:15px;padding-right: 30px; }
+#ButtonFoto #photo input {position: absolute; border:1px solid #f9f9f9; display:block; width:100%; height:30px;  border-radius:3px; letter-spacing: 10em;  opacity: 0;}
+
+#SliderBlock { width:100%; position: absolute;}
+#SliderBg {width:auto;  margin:0 auto; max-width:1400px;}
+
+#MenuAll {background: -moz-linear-gradient(top, #ff1700, #6C0000); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff1700), to(#6C0000)); border: 1px solid #740500; -webkit-box-shadow: inset 0px 0px 1px #ffeded;  box-shadow: inset 0px 0px 1px #ffeded; -moz-box-shadow: inset 0px 0px 1px #ffeded; height:50px; margin:0 auto; max-width:1400px; width:100%; margin-top:495px; }
+#MenuAll #Menu { background: #e30100; margin:0 auto; margin-top:-5px;}
+#MenuAll #Menu .One { float:left; width:166px; height:50px; overflow:hidden; margin-top: 4px}
+#MenuAll #Menu a { text-decoration:none; float:left; font-size:14px; color:#ffffff; display:block; width:166px; height:50px;  display: table; text-align:center; line-height:1; text-transform:uppercase; -webkit-box-shadow: inset 0px 0px 1px #ffeded;  box-shadow: inset 0px 0px 1px #ffeded; -moz-box-shadow: inset 0px 0px 1px #ffeded;}
+#MenuAll #Menu a p {display: table-cell; vertical-align: middle; border-left: 1px solid #740500; height: 70%; margin-top: 10%}
+
+#MenuAll #Menu a:hover {background: #e30100;  }
+#MenuAll #Menu a:focus { background: #e30100;}
+#DescrMenu {}
+#DescrMenu .TxtDescr { float:left; width:46%;}
+#DescrMenu .TitleDescr { font-size:24px; color:#104375; font-family: 'PtsansBold'; margin-top:20px; line-height:1; text-transform:uppercase;}
+#DescrMenu .TextDescrBottom { float:left; text-align:justify;}
+#DescrMenu .TextDescrBottom p { padding:10px 20px 10px 10px; font-family: 'PtsansRegular'; font-size:14px; color:#3b3b3b; line-height:1.4;}
+#DescrMenu .ImgDescr { float:left; width:54%; height:380px;}
+#DescrMenu .ImgDescr img { width:90%; margin-top:20px; margin-left:20px; -moz-transition: all 0.5s ease-out; -o-transition: all 0.5s ease-out; -webkit-transition: all 0.5s ease-out;}
+#DescrMenu .ImgDescr img:hover {-webkit-transform: scale(1.5); -moz-transform: scale(1.5); -o-transform: scale(1.5); border: solid 2px red; border-radius: 2px;}
+#DescrMenu #ButtonDescr {width:225px; height:39px; line-height:39px; background: linear-gradient(to top, #d1d1d6, #fff4fd); border-radius:10px; margin:5px 20px 30px auto;}
+#DescrMenu #ButtonDescr a {font-family: 'PtsansBold'; display:block; text-decoration:none; color:#fff; font-size:20px; text-align:center; text-transform:uppercase;}
+#DescrMenu #ButtonDescr a:hover {background: linear-gradient(to top, #fff4fd, #d1d1d6); border-radius:10px;}
+
+#OurWorks { background:url(images/BgOurWork.jpg) top center repeat-x; width:100%; padding-bottom:90px; margin:0 auto;max-width:1400px;}
+#OurWorks #TitleOurWorks { text-align:center; font-size:30px; color:#fff; font-family: 'PtsansBold'; padding-top:25px;  text-transform:uppercase; margin-bottom:30px;}
+#OurWorks ul li { padding: 10px; background: white; float:left; width:23%; height:190px; margin:0px 6px 6px; border-radius: 5px;  text-indent: 0px; -moz-transition: all 1s ease-out; -o-transition: all 1s ease-out; -webkit-transition: all 1s ease-out;}
+#OurWorks ul li img { width:60%; border:6px solid #FFF; border-radius:5px;}
+#OurWorks ul li .ButtonOurWorks{width:80px; height:35px; margin:0 auto; line-height:32px; background: linear-gradient(to top, #d1d1d6, rgb(255, 255, 255)); border-radius:4px; border:2px solid #e4eff2; margin-bottom:33px; float: right }
+#OurWorks ul li .ButtonOurWorks a { text-decoration:none; text-transform:uppercase; font-size:12px; color: #ff0009; width:80px; height:35px; display:block; padding-left:5px;  cursor:pointer;}
+#OurWorks ul li .ButtonOurWorks:hover {background: linear-gradient(to bottom, #d1d1d6, #ffffff);}
+
+
+#WhyWe {margin-bottom: 40px}
+#WhyWe #TitleWhyWe { text-align:center; font-size:33px; color:#104375; font-family: 'PtsansBold'; text-transform:uppercase; margin:32px 0 70px 0;}
+#WhyWe img {width: 75px; margin-left: 35px}
+#WhyWe ul { }
+#WhyWe ul li { float:left; width:25%; height:191px; margin-bottom:65px;}
+#WhyWe ul li:nth-child(1) { background:url(images/Why/Accuracy.png) top center no-repeat;}
+#WhyWe ul li:nth-child(2) { background:url(images/Why/Success.png) top center no-repeat;}
+#WhyWe ul li:nth-child(3) { background:url(images/Why/Experience.png) top center no-repeat;}
+#WhyWe ul li:nth-child(4) { background:url(images/Why/Certificate.png) top center no-repeat;}
+#WhyWe ul li p { font-size:17px; color:#104375; font-family: 'PtsansBold'; text-transform:uppercase; padding:120px 0 0 0; text-align:center; }
+#WhyWe ul li:nth-child(3) p { width:160px; margin:0 auto;}
+
+#ReviewsAllBg {background:#f3b620; border:0; left: 0; right: 0; margin:auto; width:auto; max-width:1400px; padding-bottom:85px; padding-top:30px;}
+#ReviewsAllBg #ReviewsTitle { color:#104375; font-family: 'PtsansBold'; font-size:33px; text-align:center; margin-bottom:40px;}
+#ReviewsAllBg #BlockOtz { width:1000px; height:260px; margin:0 auto;}
+#ReviewsAllBg #BlockOtz #ListNews { width:930px; height:240px; margin:0 auto; }
+#ReviewsAllBg #BlockOtz #ListNews .LeftDercr { float:left;}
+#ReviewsAllBg #BlockOtz #ListNews .LeftDercr img { width:250px; height:auto; margin-left:38px; margin-top:10px; margin-bottom:10px;}
+#ReviewsAllBg #BlockOtz #ListNews .LeftDercr { text-transform:uppercase; font-size:23px; color:#000000; font-family:Verdana, Geneva, sans-serif; margin-top:10px;}
+#ReviewsAllBg #BlockOtz #ListNews .DescrReviews { float:left; width:70%;  display: table; margin-top:50px; height:200px;}
+#ReviewsAllBg #BlockOtz #ListNews .DescrReviews p { font-size:18px; color:#000000; font-family: 'PtsansRegular'; font-style:italic; line-height:1; height:180px; display: table-cell; vertical-align: middle; padding-left:30px; overflow:hidden; }
+#ReviewsAllBg #BlockOtz #ListNews .Name { float:right; font-size:23px; color:#4249c0; font-family: 'PtsansRegular'; font-style:italic;}
+.owl-prev { background:url(images/Prevnext.png) center center no-repeat; width:74px; height:67px; font-size:0; float:left; margin-left:-8%; margin-top:-175px;}
+.owl-next { background:url(images/Nextbg.png) center center no-repeat;width:74px; height:67px; font-size:0; float:left; margin-left:99%; margin-top:-175px;}
+
+#MapContacts { background:url(images/BgMap.jpg) top center no-repeat; border:0; left: 0; right: 0; margin:auto; width:auto; max-width:1400px; padding-top:130px;}
+#MapContacts #Contackts { width:340px; color:#000; background-color: rgba(229, 243, 246, .8); border-radius:5px; padding-bottom:15px; float:left;}
+#MapContacts #Contackts #TitleBlContacts { text-align:center; text-transform:uppercase; font-size:24px; font-family: 'PtsansBold'; margin:20px 0; }
+#MapContacts #Contackts #Job { text-align:center; font-size:18px; font-family: 'PtsansRegular'; padding:0 30px 10px 30px;}
+#MapContacts #Contackts #Phone {text-align:center; font-size:18px; font-family: 'PtsansRegular'; font-weight:bold; background:url(images/Mapphone.png) left center no-repeat; margin-left:60px; margin-bottom:15px; text-align:left !important; padding-left:15px;}
+#MapContacts #Contackts #PhoneMTS {text-align:center; font-size:18px; font-family: 'PtsansRegular'; font-weight:bold; background:url(images/Mapphone.png) left center no-repeat; margin-left:60px; margin-bottom:15px; text-align:left !important; padding-left:15px;}
+#MapContacts #Contackts #PhoneKS {text-align:center; font-size:18px; font-family: 'PtsansRegular'; font-weight:bold; background:url(images/Mapphone.png) left center no-repeat; margin-left:60px; margin-bottom:15px; text-align:left !important; padding-left:15px;}
+#MapContacts #Contackts #Mail {text-align:center; font-size:18px; font-family: 'PtsansRegular'; font-weight:bold; background:url(images/Mappmail.png) left center no-repeat; margin-left:35px; margin-bottom:15px; text-align:left !important; padding-left:30px;}
+#MapContacts #Contackts #Skype {text-align:center; font-size:18px; font-family: 'PtsansRegular'; font-weight:bold; background: url(images/Mapskype.png) left center no-repeat; padding-left:25px; margin-left:60px; text-align:left !important; padding-left:25px; margin-bottom:10px;}
+#MapContacts #Contackts #AdressKur {text-align:center; font-size:18px; font-family: 'PtsansRegular'; font-weight:bold; background: url(images/house.png) left center no-repeat; padding-left:25px; margin-left:60px; text-align:left !important; padding-left:25px; margin-bottom:10px;}
+#MapContacts #Contackts #AdressPr {text-align:center; font-size:18px; font-family: 'PtsansRegular'; font-weight:bold; background: url(images/house.png) left center no-repeat; padding-left:25px; margin-left:60px; text-align:left !important; padding-left:25px; margin-bottom:10px;}
+#MapContacts #Contackts #SocSet {}
+#MapContacts #Contackts #SocSet ul { margin-left:215px;}
+#MapContacts #Contackts #SocSet ul li { width:31px; height:33px; float:left; margin-left:10px;}
+#MapContacts #Contackts #SocSet ul li a { display:block; width:31px; height:33px;}
+#MapContacts #Contackts #SocSet ul li:nth-child(1) a { background:url(images/Face.jpg) center center no-repeat;}
+#MapContacts #Contackts #SocSet ul li:nth-child(2) a { background:url(images/Vk.jpg) center center no-repeat;}
+
+#MapContacts #FormDeskrContackt { float:left; background: #e30100; background-color: rgba(227, 51, 59, 0.7); width:300px; margin-left:30%; margin-bottom:90px;}
+#MapContacts #FormDeskrContackt p { text-transform:uppercase; font-size:18px; font-family: 'PtsansBold'; color:#fff; padding:17px 10px 15px 10px; text-align:center; line-height:1.2;}
+#MapContacts #FormDeskrContackt input { font-size:17px; color:#828282; width:215px; background:#fff; line-height:30px; height:30px; padding:0 10px; margin-bottom:15px; margin-left:38px; font-family: 'PtsansRegular'; border: none;}
+::-moz-placeholder {font-size:17px; color: #afafaf; font-family: 'Arial'; text-transform:uppercase; }
+#MapContacts #FormDeskrContackt #ButtonFormDeskrContackt {width:190px; height:42px; margin:0 auto; line-height:38px; background: linear-gradient(to top, #d1d1d6, #fff4fd); border-radius:4px; border:2px solid #e4eff2; margin-bottom:33px; }
+#MapContacts #FormDeskrContackt #ButtonFormDeskrContackt a { text-decoration:none; text-transform:uppercase; font-size:12.5px; font-family: 'PtsansBold'; color: #e30100; width:190px; height:42px; display:block; padding-left:45px; background:url(images/BasketImg.png)20px 8px no-repeat;}
+#MapContacts #FormDeskrContackt #ButtonFormDeskrContackt:hover {background: linear-gradient(to bottom, #d1d1d6, #fff4fd);}
+
+footer { background: #ff0009; border:0; left: 0; right: 0; margin:auto; width:auto; max-width:1400px;}
+footer #LogoBot { width:238px; height:73px; float:left;}
+footer #LogoBot a { background:url(images/logo3.png) center center no-repeat; width:238px; height:73px; display:block;}
+footer #NavBot { float:left;}
+footer #NavBot ul { margin-left:35px;}
+footer #NavBot ul li {float:left; margin-right:15px; margin-top:28px;}
+footer #NavBot ul li a {font-size:15px; color:#000000; font-family: 'PtsansBold'; text-transform:uppercase; text-decoration:none;}
+footer #NavBot ul li a:hover {color:#ffffff;}
+footer #NavBot ul li a:focus {color:#ffffff;}
+footer #TelBotFoot {float:left; background:url(images/PhoneBot.png) left top no-repeat; padding-left:40px; font-size:22px; color:#000000; font-family: 'PtsansBold'; margin-top:20px; height:32px; padding-top:2px; margin-left:35px;}
+
+/*-------------------------------------*/
+@media screen and (max-width: 980px) { /* 980<width<1200 main 980*/
+section { width:98%;}
+    #BlockTop {  right: 20px;  }
+#Header #Logo { width:20%; }
+#Header #Logo a { background-size:contain; width:100%;}
+#BlockTop #DeskrTop { padding-left:5% !important;}
+
+#MenuAll #Menu .One { width:16.6%;}
+#MenuAll #Menu a { width:100%;}
+
+#OurWorks { padding-bottom:25px;}
+#OurWorks #TitleOurWorks { font-size:25px; padding-top:15px; margin-bottom:15px;}
+#OurWorks ul li {-moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; -webkit-transition: all 0.2s ease-out; cursor: pointer; height:180px;}
+#OurWorks ul li img { width:96%; border:6px solid #FFF; border-radius:5px;}
+#OurWorks ul li:hover {-webkit-transform: scale(1.2); -moz-transform: scale(1.2); -o-transform: scale(1.2);}
+
+#WhyWe #TitleWhyWe { margin:0 !important; padding:15px 0 35px 0;}
+
+#ReviewsAllBg { padding-top:15px;}
+#ReviewsAllBg #ReviewsTitle {font-size:27px; margin:0 !important;}
+
+#ReviewsAllBg { height:auto !important; padding-bottom:30px;}
+#ReviewsAllBg #BlockOtz { height:auto !important; width:100%;}
+#ReviewsAllBg #BlockOtz #ListNews {width:100%; padding-top:25px;}
+#ReviewsAllBg #BlockOtz #ListNews .LeftDercr {width:25%;}
+#ReviewsAllBg #BlockOtz #ListNews .LeftDercr img { width:81%; height:auto;}
+#ReviewsAllBg #BlockOtz #ListNews .DescrReviews { width:72% !important; margin-top:5px; height:auto;}
+#ReviewsAllBg #BlockOtz #ListNews .DescrReviews p { padding-left:5px; text-align:left;}
+#ReviewsAllBg #BlockOtz #ListNews .Name { float:left; width:40%; font-size:16px;}
+.owl-prev {margin-left:-25px; background-size:60%; margin-top:-275px;}
+.owl-next {margin-left:25px; background-size:60%; margin-top:-275px;}
+
+footer #LogoBot { width:20%;}
+footer #LogoBot a { width:100%; background-size: contain;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 979px) { /* 768<width<979 main 768*/
+
+#Header #Logo { width:20%; margin-right:0; height:45px; margin-top:0;}
+#Header nav { width:100%; margin-top:-7px;}
+#Header nav ul { margin-left:2%; }
+#Header nav ul li { margin:0 !important; }
+#Header nav ul li a { font-size:14px;}
+#Header #Pfone { margin:0 !important; width:33%; margin-left:20% !important;}
+
+    #BlockTop {  right: 20px;  }
+#BlockTop #DeskrTop { padding-left:0; width:50%;}
+#BlockTop #DeskrTop p { font-size:30px; width:100%; padding-left:0;}
+#BlockTop #DeskrTop ul li { font-size:22px; width:100%;}
+#BlockTop #FormDeskrTop { width:40%; margin-left:0; margin-right:5%; margin-left:5%;}
+
+#BlockTop #FormDeskrTop input { width:80%; margin:0 10% 15px 10%;}
+#MenuAll {height:80px;}
+#MenuAll #Menu .One { height:80px;}
+#MenuAll #Menu a { font-size:11px; font-family:Tahoma, Geneva, sans-serif; font-weight:600; line-height:1.3; height:80px;}
+
+#DescrMenu .TxtDescr {width:70%;}
+#DescrMenu .ImgDescr { width:30%; height:auto;}
+#DescrMenu .ImgDescr img:hover { margin-left:-100px;}
+
+#OurWorks { padding-bottom:25px;}
+#OurWorks #TitleOurWorks {}
+#OurWorks ul li {-moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; -webkit-transition: all 0.2s ease-out; cursor: pointer; height: auto;}
+
+#WhyWe ul li p { font-size:16px;}
+
+#ReviewsAllBg #BlockOtz #ListNews .LeftDercr img { width:150px;}
+.owl-prev {background-size:40px; margin-left:0;}
+.owl-next {background-size:40px; margin-left:50px;}
+
+#MapContacts #Contackts {}
+#MapContacts #FormDeskrContackt { float:right; margin-left:0;}
+
+footer #LogoBot {width:20%; margin-right:0; height:50px;}
+footer #LogoBot a {height:50px;}
+footer #NavBot {width:50% !important;}
+footer #NavBot ul { margin:0; padding-left:7%; width:100%;}
+footer #NavBot ul li { margin-right:2%; margin-top:15px;}
+footer #NavBot ul li a { font-size:12px;}
+footer #TelBotFoot { width:30%; margin:0; font-size:16px; margin-top:10px;}
+}
+
+/*-------------------------------------*/
+@media screen and (max-width: 767px) { /* 480<width<767 main 480*/
+
+
+#Header #Logo { width:30%; height:40px;}
+#Header nav { width:100%; margin-top:0; margin-bottom:5px;} 
+#Header nav ul { width:100%; margin-left:0}
+#Header nav ul li {font-size:12px; margin:0 !important; width:20%; text-align:center; }
+#Header nav ul li:nth-child(2) { text-align:right !important;}
+#Header #Pfone {width:60%; margin-left:35% !important; margin-top:-65px !important; padding-left:15%; background-position:14% center;}
+#BlockTop #DeskrTop { width:100%; margin:0; display: none}
+#BlockTop #DeskrTop p { display:none;}
+#BlockTop #DeskrTop .None { display:block; color:#fff; text-transform:uppercase; font-size:20px; font-family: 'PtsansBold'; text-shadow: 0.1em 0.1em 0.2em black; color: aliceblue; width:100%; margin-top:5px; margin-bottom:5px; text-align:center; margin-left:-2%;}
+#BlockTop #DeskrTop ul { width:100%;}
+#BlockTop #DeskrTop ul li { width:90%; margin-left:0; font-size:16px;}
+#BlockTop #DeskrTop ul li span {color:#0c749e;}
+#BlockTop #FormDeskrTop {margin-right:5%; margin-left: 15%; width:70%; margin-top:15% !important;  margin-top:5px; padding-bottom:10px;}
+#BlockTop #FormDeskrTop p {font-size:14px; padding:10px;}
+#BlockTop #FormDeskrTop input {font-size:15px; line-height:25px; height:25px; margin-bottom:10px;}
+::-moz-placeholder {font-size:15px;}
+#BlockTop #FormDeskrTop #ButtonFormDeskrTop { height:35px; line-height:32px; margin-bottom:0;}
+#BlockTop #FormDeskrTop #ButtonFormDeskrTop a {height:33px; background-position:20px 5px;}
+#SliderBlock {display:none;}
+#BgSLiderSmal {background: url(images/Img2.jpg) top center no-repeat; width:auto; height:400px;}
+
+#MenuAll { margin:0; height:auto !important}
+#MenuAll #Menu .One { width:50%; padding:0 5px; height:50px;}
+#MenuAll #Menu a { font-size:12px; font-weight:100; height:50px;}
+
+#DescrMenu .TxtDescr {width:100%;}
+#DescrMenu .ImgDescr { width:100%;  -moz-transition: none; -o-transition: none; -webkit-transition: none; }
+#DescrMenu .ImgDescr img {margin-top:0;}
+#DescrMenu .ImgDescr img:hover {-webkit-transform: none !important; -moz-transform: none !important; -o-transform: none !important; margin-left:20px !important; padding-left:0;}
+
+#OurWorks { background:url(images/BgOurWork.jpg) top center repeat;}
+#OurWorks ul li { width:45%;}
+
+#WhyWe ul li { background-size:100px !important}
+#WhyWe ul li:nth-child(3) p {padding:170px 0 0 0;}
+#WhyWe ul li:nth-child(4) p {padding:150px 0 0 0;}
+#WhyWe ul li p { font-size:10px; width:80% !important; margin:0 auto !important; font-family:Tahoma, Geneva, sans-serif;}
+
+#ReviewsAllBg #BlockOtz #ListNews .LeftDercr img { width:60%;}
+#ReviewsAllBg #BlockOtz #ListNews .Name { width:100%; text-align:center}
+#ReviewsAllBg #BlockOtz #ListNews .DescrReviews p { font-size:14px;}
+.owl-prev {background-size:30px !important}
+.owl-next {background-size:30px !important}
+
+#MapContacts { padding-top:15px; background-size: cover; padding-bottom:15px;}
+#MapContacts #Contackts { width:80%; margin:0 10%; margin-bottom:15px;}
+#MapContacts #FormDeskrContackt {  width:80%; margin:0 10%;}
+#MapContacts #FormDeskrContackt input { width:80%; margin:0 10% 15px 10%;}
+
+footer #LogoBot {width:20%; margin-right:0; height:70px;}
+footer #LogoBot a {height:70px;}
+footer #NavBot {width:40% !important;}
+footer #NavBot ul { padding-top:10px;}
+footer #NavBot ul li { margin-right:2%; margin-top:5px; width:29%; text-align:center}
+footer #NavBot ul li:nth-child(1){ width:45%}
+footer #NavBot ul li:nth-child(2){ width:50%}
+footer #TelBotFoot { width:40%; margin:0; font-size:16px; margin-top:20px;}
+
+}
+/*-------------------------------------*/
+@media screen and (max-width: 479px) { /* 320<width<479 main 320*/
+html {width:100%; min-width:307px;}
+#Header #Logo { width:35%;}
+#Header #Pfone { font-size:17px; padding-left:13%; width:75%; background-position:4% center; padding-top:6px; margin-top:-90px !important; background-size:25px;}
+#Header #Two { display:block;}
+#Header #Two ul {}
+#Header #Two ul li { float:left; text-align:center !important; font-size:12px;}
+#Header #Two ul.left {width:100%; padding-right:5px; padding-bottom:0; margin-bottom:20px;}
+#Header #Two ul.left li { width:50%;}
+#Header #Two ul.right {width:100%; padding-left:5px; padding-bottom:10px;}
+#Header #Two ul.right li { width:33%;}
+
+#BlockTop #DeskrTop  { width:100%;}
+#BlockTop #DeskrTop ul {margin-left:0;}
+#BlockTop #DeskrTop ul li { background-size:12px;}
+#BlockTop #DeskrTop .None { font-size:18px;}
+#BlockTop #FormDeskrTop { margin-top:8% !important;}
+#BgSLiderSmal { width:auto; height:450px; background-size: cover;}
+
+#MenuAll #Menu .One { width:50%; padding:0 5px; height:60px;}
+#MenuAll #Menu a { font-size:11px; font-weight:100; height:60px;}
+
+#DescrMenu .TitleDescr { font-size:18px;}
+#DescrMenu #ButtonDescr { width:90%; margin:0 5%;}
+#DescrMenu .ImgDescr { margin-top:15px;}
+#DescrMenu .ImgDescr img { width:89%;}
+
+#OurWorks ul li { width:100%; margin:0 !important}
+#OurWorks ul li img { width:100%;} 
+#OurWorks ul li:hover {-webkit-transform: none !important; -moz-transform: none !important; -o-transform: none !important; cursor: auto}
+
+#WhyWe ul li { width:50%; background-size:80px !important; height:100px !important;}
+#WhyWe ul li p {padding:90px 0 0 0;}
+#WhyWe ul li:nth-child(3) { height:130px !important;}
+#WhyWe ul li:nth-child(3) p { padding:140px 0 0 0;}
+#WhyWe ul li:nth-child(4) { height:130px !important;}
+#WhyWe ul li:nth-child(4) p { padding:130px 0 0 0;}
+
+#ReviewsAllBg #ReviewsTitle { padding-bottom:0;}
+#ReviewsAllBg #BlockOtz #ListNews {padding:0}
+#ReviewsAllBg #BlockOtz #ListNews .LeftDercr { width:100%;  }
+#ReviewsAllBg #BlockOtz #ListNews .LeftDercr img { width:32%; margin-left:33%;}
+#ReviewsAllBg #BlockOtz #ListNews .DescrReviews { width:100% !important;}
+#ReviewsAllBg #BlockOtz #ListNews .DescrReviews p { width:100%;}
+
+.owl-prev { background-size:0px !important;}
+.owl-next {background-size:0px !important}
+
+#MapContacts #Contackts { width:90%; margin:0 5%; margin-bottom:5px;}
+#MapContacts #Contackts #TitleBlContacts { font-size:18px; margin:0; padding:5px;}
+#MapContacts #Contackts #Job { font-size:14px;}
+#MapContacts #Contackts #Phone {margin-left:13%; margin-bottom:10px; padding-left:15px;}
+#MapContacts #Contackts #Mail {margin-left:9%; margin-bottom:10px; padding-left:30px;}
+#MapContacts #Contackts #Skype {padding-left:13%; margin-left:40px; padding-left:25px; margin-bottom:5px;}
+#MapContacts #Contackts #SocSet ul { margin:0;}
+#MapContacts #Contackts #SocSet ul li { width:45%;}
+#MapContacts #Contackts #SocSet ul li:nth-child(1) a { background:url(images/Face.jpg) right center no-repeat; margin-left:auto;}
+#MapContacts #Contackts #SocSet ul li:nth-child(2) a { background:url(images/Vk.jpg) center center no-repeat;}
+#MapContacts #FormDeskrContackt {  width:90%; margin:0 5%;}
+#MapContacts #FormDeskrContackt input { width:90%; margin:0 5% 5px 5%;}
+#MapContacts #FormDeskrContackt p { padding:5px; font-size:14px;}
+#MapContacts #FormDeskrContackt #ButtonFormDeskrContackt { margin-bottom:10px;}
+
+footer #LogoBot {width:20%; margin-right:0; height:120px;}
+footer #LogoBot a {height:120px;}
+footer #NavBot {width:100% !important;}
+footer #NavBot ul { padding-top:10px;}
+footer #NavBot ul li { margin-right:2%; margin-top:5px; width:46% !important; text-align:center;}
+footer #NavBot ul li:nth-child(5) { width:100% !important;}
+footer #TelBotFoot { width:80%; margin:0; font-size:16px; text-align:right; background-position:30% center; padding-top:6px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
