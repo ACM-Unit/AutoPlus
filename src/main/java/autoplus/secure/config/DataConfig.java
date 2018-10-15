@@ -21,9 +21,9 @@ import java.util.Properties;
 @EnableJpaRepositories("autoplus.secure.repository")
 public class DataConfig {
     private static final String PROPERTY_NAME_DATABASE_DRIVER = "com.mysql.jdbc.Driver";
-    private static final String PROPERTY_NAME_DATABASE_URL = "jdbc:mysql://localhost:3306/autoplus?characterEncoding=UTF-8";
-    private static final String PROPERTY_NAME_DATABASE_USERNAME = "root";
-    private static final String PROPERTY_NAME_DATABASE_PASSWORD = "root";
+    private static final String PROPERTY_NAME_DATABASE_URL = "jdbc:mysql://127.0.0.1:3306/root?characterEncoding=UTF-8";
+    private static final String PROPERTY_NAME_DATABASE_USERNAME = "user4cG";
+    private static final String PROPERTY_NAME_DATABASE_PASSWORD = "rI07l8CT";
 
     private static final String PROPERTY_NAME_HIBERNATE_DIALECT = "org.hibernate.dialect.MySQLDialect";
     private static final String PROPERTY_NAME_HIBERNATE_SHOW_SQL = "true";
