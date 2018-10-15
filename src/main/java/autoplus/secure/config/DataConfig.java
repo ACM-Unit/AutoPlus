@@ -24,10 +24,9 @@ public class DataConfig {
     Logger LOGGER = Logger.getLogger(DataConfig.class);
     private static final String PROPERTY_NAME_DATABASE_DRIVER = "com.mysql.jdbc.Driver";
 
-    String PROPERTY_NAME_DATABASE_USERNAME = System.getenv("MYSQL_USER");
-    String PROPERTY_NAME_DATABASE_PASSWORD = System.getenv("MYSQL_PASSWORD");
-    String DB_NAME = System.getenv("MYSQL_DATABASE");
-    private final String PROPERTY_NAME_DATABASE_URL = "jdbc:mysql://127.0.0.1:3306/"+ DB_NAME+"?characterEncoding=UTF-8";
+    private final String PROPERTY_NAME_DATABASE_USERNAME = "user4cG";
+    private final String PROPERTY_NAME_DATABASE_PASSWORD = "rI07l8CT";
+    private final String PROPERTY_NAME_DATABASE_URL = "jdbc:mysql://172.30.21.10:3306/root?characterEncoding=UTF-8";
 
     private static final String PROPERTY_NAME_HIBERNATE_DIALECT = "org.hibernate.dialect.MySQLDialect";
     private static final String PROPERTY_NAME_HIBERNATE_SHOW_SQL = "true";
