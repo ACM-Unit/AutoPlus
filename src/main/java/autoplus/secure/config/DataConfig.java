@@ -1,5 +1,6 @@
 package autoplus.secure.config;
 
+import org.apache.log4j.Logger;
 import org.hibernate.ejb.HibernatePersistence;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -20,6 +21,7 @@ import java.util.Properties;
 @PropertySource("classpath:app.properties")
 @EnableJpaRepositories("autoplus.secure.repository")
 public class DataConfig {
+    Logger LOGGER = Logger.getLogger(DataConfig.class);
     private static final String PROPERTY_NAME_DATABASE_DRIVER = "com.mysql.jdbc.Driver";
 
     String PROPERTY_NAME_DATABASE_USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
@@ -30,7 +32,7 @@ public class DataConfig {
     private static final String PROPERTY_NAME_HIBERNATE_DIALECT = "org.hibernate.dialect.MySQLDialect";
     private static final String PROPERTY_NAME_HIBERNATE_SHOW_SQL = "true";
     private static final String PROPERTY_NAME_ENTITYMANAGER_PACKAGES_TO_SCAN = "autoplus.secure.entity";
-    private static final String PROPERTY_NAME_HIBERNATE_HBM2DDL_AUTO = "update";
+    private static final String PROPERTY_NAME_HIBERNATE_HBM2DDL_AUTO = "create";
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
@@ -55,9 +57,7 @@ public class DataConfig {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-
-
-
+        LOGGER.info(PROPERTY_NAME_DATABASE_URL);
         dataSource.setDriverClassName(PROPERTY_NAME_DATABASE_DRIVER);
         dataSource.setUrl(PROPERTY_NAME_DATABASE_URL);
         dataSource.setUsername(PROPERTY_NAME_DATABASE_USERNAME);
