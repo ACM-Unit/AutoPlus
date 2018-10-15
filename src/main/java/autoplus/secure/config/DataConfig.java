@@ -57,7 +57,7 @@ public class DataConfig {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        LOGGER.info(PROPERTY_NAME_DATABASE_URL);
+        LOGGER.info("My jdbc mysql link ===============>    " + PROPERTY_NAME_DATABASE_URL);
         dataSource.setDriverClassName(PROPERTY_NAME_DATABASE_DRIVER);
         dataSource.setUrl(PROPERTY_NAME_DATABASE_URL);
         dataSource.setUsername(PROPERTY_NAME_DATABASE_USERNAME);
