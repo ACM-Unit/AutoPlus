@@ -24,10 +24,10 @@ public class DataConfig {
     Logger LOGGER = Logger.getLogger(DataConfig.class);
     private static final String PROPERTY_NAME_DATABASE_DRIVER = "com.mysql.jdbc.Driver";
 
-    String PROPERTY_NAME_DATABASE_USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
-    String PROPERTY_NAME_DATABASE_PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
-    String DB_NAME = System.getenv("OPENSHIFT_APP_NAME");
-    String PROPERTY_NAME_DATABASE_URL= "jdbc:"+System.getenv("OPENSHIFT_MYSQL_DB_URL")+ DB_NAME;
+    String PROPERTY_NAME_DATABASE_USERNAME = System.getenv("MYSQL_USER");
+    String PROPERTY_NAME_DATABASE_PASSWORD = System.getenv("MYSQL_PASSWORD");
+    String DB_NAME = System.getenv("MYSQL_DATABASE");
+    private final String PROPERTY_NAME_DATABASE_URL = "jdbc:mysql://127.0.0.1:3306/"+ DB_NAME+"?characterEncoding=UTF-8";
 
     private static final String PROPERTY_NAME_HIBERNATE_DIALECT = "org.hibernate.dialect.MySQLDialect";
     private static final String PROPERTY_NAME_HIBERNATE_SHOW_SQL = "true";
