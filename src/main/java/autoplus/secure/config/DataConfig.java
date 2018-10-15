@@ -21,9 +21,11 @@ import java.util.Properties;
 @EnableJpaRepositories("autoplus.secure.repository")
 public class DataConfig {
     private static final String PROPERTY_NAME_DATABASE_DRIVER = "com.mysql.jdbc.Driver";
-    private static final String PROPERTY_NAME_DATABASE_URL = "jdbc:mysql://127.0.0.1:3306/root?characterEncoding=UTF-8";
-    private static final String PROPERTY_NAME_DATABASE_USERNAME = "user4cG";
-    private static final String PROPERTY_NAME_DATABASE_PASSWORD = "rI07l8CT";
+
+    String PROPERTY_NAME_DATABASE_USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+    String PROPERTY_NAME_DATABASE_PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
+    String DB_NAME = System.getenv("OPENSHIFT_APP_NAME");
+    String PROPERTY_NAME_DATABASE_URL= "jdbc:"+System.getenv("OPENSHIFT_MYSQL_DB_URL")+ DB_NAME;
 
     private static final String PROPERTY_NAME_HIBERNATE_DIALECT = "org.hibernate.dialect.MySQLDialect";
     private static final String PROPERTY_NAME_HIBERNATE_SHOW_SQL = "true";
@@ -53,6 +55,8 @@ public class DataConfig {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
+
+
 
         dataSource.setDriverClassName(PROPERTY_NAME_DATABASE_DRIVER);
         dataSource.setUrl(PROPERTY_NAME_DATABASE_URL);
